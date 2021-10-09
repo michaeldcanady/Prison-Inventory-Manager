@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/navbar.css">
+    <title>{{ site_name }}</title>
+  </head>
+  <body>
+    <!-- Prison Inventory Manager Navigation Bar -->
+    <header>
+      <!-- Navbar -->
+      <nav id="nav-bar">
+        <div class="nav-bar-logo">
+        <span></span>
+        </div>
+        <div class="vertical-bar"></div>
+        <div class="nav-bar-container">
+            <a href="/">Home</a>
+            </a>
+        </div>
+        <div class="nav-bar-container">
+            <a href="/PrisonManger/pages/inventory/?t=test_items">Inventory</a>
+        </div>
+        <div class="nav-bar-container">
+            <a href="/PrisonManger/pages/personnel/">Personnel</a>
+        </div>
+        <div class="nav-bar-container right">
+            <a href="/PrisonManger/php/logout.php" style="height: 80px">log out</a>
+        </div>
+        <div class="vertical-bar" style="float: right"></div>
+        <p class="welcome"><?php echo "Welcome, ". $_SESSION['firstname']." ".$_SESSION['lastname']?></p>
+    </nav>
+    </header>
+  </body>
+</html>

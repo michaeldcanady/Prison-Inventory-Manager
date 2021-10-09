@@ -1,0 +1,67 @@
+#nav-bar {
+  height: 11%;
+  background-color: #212121;
+}
+
+.nav-bar-container {
+  display: inline-block;
+  position: relative;
+  height: 80px;
+}
+
+.right {
+  float: right;
+}
+
+.nav-bar-container a,
+.nav-bar-logo span,
+.welcome {
+  border-bottom: 2px solid transparent;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 76px;
+  margin: 0 0.85em;
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98),
+    border-color 0.5s cubic-bezier(0.06, 0.81, 0, 0.98);
+  text-decoration: none;
+}
+
+.welcome {
+  float: right;
+}
+
+.nav-bar-container a:hover,
+.nav-bar-container a.current {
+  border-bottom: #026b65 3px solid;
+}
+
+.nav-bar-logo span {
+  background: url("../img/CorrectionsSuiteLogo.png") no-repeat center center;
+  background-size: 100px;
+  height: 80px;
+  width: 100px;
+}
+
+.nav-bar-logo {
+  display: inline-block;
+  position: relative;
+  height: 80px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.vertical-bar {
+  display: inline-block;
+  border-right: 1px solid #5f656d; /* Border on the left */
+  width: 1px; /* Width instead of height */
+  margin: 20px 0;
+  height: 40px;
+}
