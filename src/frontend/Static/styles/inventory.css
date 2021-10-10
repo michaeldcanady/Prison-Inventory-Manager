@@ -1,0 +1,36 @@
+.table-container {
+  border: 1px solid black;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 70%;
+}
+
+.table-selection {
+  display: inline-block;
+  border-right: 1px solid black;
+  width: 7%;
+  height: 100%;
+}
+
+.table-selection ul {
+  margin: 0;
+  list-style: none;
+}
+
+.dataTable-container {
+  float: right;
+  width: 92.9%;
+}
+
+.dataTable-container table {
+  width: 100%;
+}
+
+.table-options {
+  border-bottom: 1px solid black;
+}
+
+.table-pageNumbers {
+  bottom: 0;
+}

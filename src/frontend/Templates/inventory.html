@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="../static/styles/navbar.css" />
+    <link rel="stylesheet" href="../static/styles/inventory.css" />
+    <title>{{ site_name }}</title>
+  </head>
+  <body>
+       <!-- Prison Inventory Manager Navigation Bar -->
+    <header>
+        <!-- Navbar -->
+        <nav id="nav-bar">
+          <div class="nav-bar-logo">
+          <span></span>
+          </div>
+          <div class="vertical-bar"></div>
+          <div class="nav-bar-container">
+              <a href="/">Home</a>
+              </a>
+          </div>
+          <div class="nav-bar-container">
+              <a href="/inventory">Inventory</a>
+          </div>
+          <div class="nav-bar-container">
+              <a href="/personnel/">Personnel</a>
+          </div>
+          <div class="nav-bar-container right">
+              <a href="/logout" style="height: 80px">log out</a>
+          </div>
+          <div class="vertical-bar" style="float: right"></div>
+          <p class="welcome"></p>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="table-container">
+          <!-- Table View selection -->
+        <div class="table-selection">
+            <ul>
+                <li><a href="/inventory/equipment">Equipment</a></li>
+                <li><a href="/inventory/categories">Categories</a></li>
+            </ul>
+        </div>
+        <!-- Table -->
+        <div class="dataTable-container">
+            <div class="table-options">
+                <p>Add Filter refresh</p>
+            </div>
+            <table>
+                <th>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Storage Locations</td>
+                    <td>Quantity</td>
+                    <td>Description</td>
+                </th>
+                <tr>
+                    <td>Gun</td>
+                </tr>
+            </table>
+            <div class="table-pageNumbers">
+                <a>1</a>
+            </div>
+        </div>
+      </div>
+  </body>
+  <!-- Footer -->
+  <footer>
+
+  </footer>
+</html>

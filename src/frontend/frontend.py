@@ -34,8 +34,8 @@ def create_app():
             Renders home page or login page, depending on authentication status.
         """
         token = request.cookies.get(app.config['TOKEN_NAME'])
-        if not verify_token(token):
-            return login_page()
+        # if not verify_token(token):
+        #    return login_page()
         return home()
 
     @app.route("/home")
@@ -44,17 +44,56 @@ def create_app():
         Renders home page. Redirects to /login if token is not valid
         """
         token = request.cookies.get(app.config['TOKEN_NAME'])
-        if not verify_token(token):
-            # user isn't authenticated
-            app.logger.debug(
-                "User isn\ 't authenticated. Redirecting to login page.")
-            return redirect(url_for('login_page',
-                                    _external=True,
-                                    _scheme=app.config['SCHEME']))
-        token_data = jwt.decode(token, verify=False)
+        # if not verify_token(token):
+        # user isn't authenticated
+        #    app.logger.debug(
+        #        "User isn\ 't authenticated. Redirecting to login page.")
+        #    return redirect(url_for('login_page',
+        #                            _external=True,
+        #                            _scheme=app.config['SCHEME']))
+        #token_data = jwt.decode(token, verify=False)
 
         # page followed by variables to be used
-        return render_template('index.html')
+        return render_template('index.html',
+                               site_name="Prison Inventory Manager")
+
+    @app.route("/inventory")
+    def inventory():
+        """
+        Renders inventory page. Redirects to /login if token is not valid
+        """
+        token = request.cookies.get(app.config['TOKEN_NAME'])
+        # if not verify_token(token):
+        # user isn't authenticated
+        #    app.logger.debug(
+        #        "User isn\ 't authenticated. Redirecting to login page.")
+        #    return redirect(url_for('login_page',
+        #                            _external=True,
+        #                            _scheme=app.config['SCHEME']))
+        #token_data = jwt.decode(token, verify=False)
+
+        # page followed by variables to be used
+        return render_template('inventory.html',
+                               site_name="Prison Inventory Manager")
+
+    @app.route("/inventory/equipment")
+    def inventoryEquipment():
+        """
+        Renders inventory page. Redirects to /login if token is not valid
+        """
+        token = request.cookies.get(app.config['TOKEN_NAME'])
+        # if not verify_token(token):
+        # user isn't authenticated
+        #    app.logger.debug(
+        #        "User isn\ 't authenticated. Redirecting to login page.")
+        #    return redirect(url_for('login_page',
+        #                            _external=True,
+        #                            _scheme=app.config['SCHEME']))
+        #token_data = jwt.decode(token, verify=False)
+
+        # page followed by variables to be used
+        return render_template('inventory.html',
+                               site_name="Prison Inventory Manager")
 
     def verify_token(token):
         """
